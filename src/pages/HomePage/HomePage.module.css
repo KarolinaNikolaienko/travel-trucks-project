@@ -1,0 +1,24 @@
+.heroSection{
+    width: 100%;
+    padding: 260px 0;
+    background-image: url("../../assets/heroBackground.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.heroTitle {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 0.66667;
+    color: var(--inputs);
+    margin-bottom: 16px;
+}
+
+.heroDescription {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.33333;
+    color: var(--inputs);
+    margin-bottom: 40px;
+}

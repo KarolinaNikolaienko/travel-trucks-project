@@ -3,6 +3,7 @@
   line-height: 1.5;
   font-weight: 500;
   font-size: 16px;
+  color: var(--main);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -69,4 +70,23 @@ ol {
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 64px;
+}
+
+button {
+  padding: 16px 48px;
+  border-radius: 200px;
+  letter-spacing: -0.01em;
+  border: none;
+  color: var(--white);
+  background-color: var(--button);
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--button-hover);
 }
