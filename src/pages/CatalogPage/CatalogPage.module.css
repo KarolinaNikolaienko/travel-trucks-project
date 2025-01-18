@@ -1,0 +1,37 @@
+.catalogSection {
+    padding-top: 48px;
+    padding-bottom: 52px;
+}
+
+.catalogWrapper {
+    display: flex;
+    gap: 64px;
+}
+
+.catalogFilters {
+    background-color: antiquewhite;
+}
+
+.catalog {
+    background-color: bisque;
+}
+
+.locationLabel {
+    display: flex;
+    flex-direction: column;
+    font-weight: 400;
+    color: var(--gray);
+}
+
+.locationLabelText {
+    margin-bottom: 8px;
+}
+
+.locationIcon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 18px;
+    fill: currentColor;
+}
+

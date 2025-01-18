@@ -1,0 +1,23 @@
+.input {
+    font: inherit;
+    font-weight: 400;
+    width: 100%;
+    border: none;
+    border-radius: 12px;
+    padding: 18px;
+    background-color: var(--inputs);
+    color: var(--main);
+    outline: none;
+}
+
+.input::placeholder {
+    color: var(--gray);
+}
+
+.input:not(:placeholder-shown) + svg {
+    fill: var(--main)
+}
+
+.inputField {
+    position: relative;
+}
