@@ -8,10 +8,6 @@
     gap: 64px;
 }
 
-.catalogFilters {
-    background-color: antiquewhite;
-}
-
 .catalog {
     background-color: bisque;
 }
@@ -21,6 +17,7 @@
     flex-direction: column;
     font-weight: 400;
     color: var(--gray);
+    margin-bottom: 40px;
 }
 
 .locationLabelText {
@@ -33,5 +30,11 @@
     transform: translateY(-50%);
     left: 18px;
     fill: currentColor;
+}
+
+.filtersText{
+    display: block;
+    color: var(--text);
+    margin-bottom: 32px;
 }
 
