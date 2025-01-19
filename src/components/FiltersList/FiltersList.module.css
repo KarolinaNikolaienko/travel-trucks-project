@@ -8,13 +8,6 @@
     line-height: 1.2;
 }
 
-hr {
-    border: none;
-    height: 1px;
-    background-color: var(--gray-light);
-    margin: 24px 0;
-}
-
 .filtersList {
     display: flex;
     flex-wrap: wrap;

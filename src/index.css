@@ -53,6 +53,7 @@ img {
 
 a {
   text-decoration: none;
+  color: currentColor;
 }
 
 h1,
@@ -75,6 +76,13 @@ ol {
 .container {
   margin: 0 auto;
   padding: 0 64px;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: var(--gray-light);
+  margin: 24px 0;
 }
 
 button {

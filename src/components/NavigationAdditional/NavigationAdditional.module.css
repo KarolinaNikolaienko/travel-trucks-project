@@ -1,0 +1,24 @@
+.additionalInfoList {
+    display: flex;
+    gap: 40px;
+}
+
+.additionalInfoItem {
+    position: relative;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.2;
+    padding-bottom: 24px;
+    color: var(--main);
+}
+
+.additionalInfoMenu.isActive::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 6px;
+    background-color: var(--button);
+}

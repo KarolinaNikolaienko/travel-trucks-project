@@ -1,23 +1,22 @@
+import css from "./DetailsPage.module.css";
 import { Suspense } from "react";
-import { NavLink, Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import Loader from "../../components/Loader/Loader";
+import clsx from "clsx";
+import NavigationAdditional from "../../components/NavigationAdditional/NavigationAdditional";
 
 const DetailsPage = () => {
   return (
-    <div>
-      DetailsPage
-      <ul>
-        <li>
-          <NavLink to="features">Features</NavLink>
-        </li>
-        <li>
-          <NavLink to="reviews">Reviews</NavLink>
-        </li>
-      </ul>
-      <Suspense fallback={<Loader />}>
-        <Outlet />
-      </Suspense>
-    </div>
+    <section className={css.detailsSection}>
+      <div className="container">
+        DetailsPage
+        <NavigationAdditional />
+        <hr />
+        <Suspense fallback={<Loader />}>
+          <Outlet />
+        </Suspense>
+      </div>
+    </section>
   );
 };
 

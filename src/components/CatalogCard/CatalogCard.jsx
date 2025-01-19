@@ -4,7 +4,7 @@ import CategoriesList from "../CategoriesList/CategoriesList";
 import { useEffect, useId, useState } from "react";
 import clsx from "clsx";
 
-const CatalogCard = () => {
+const CatalogCard = ({truck}) => {
   const navigate = useNavigate();
   const checkboxId = useId();
   const id = 1;
