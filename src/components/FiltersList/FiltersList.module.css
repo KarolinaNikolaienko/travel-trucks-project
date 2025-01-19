@@ -1,0 +1,22 @@
+.filters:not(:last-child){
+    margin-bottom: 32px;
+}
+
+.filterTitle{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.2;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: var(--gray-light);
+    margin: 24px 0;
+}
+
+.filtersList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}

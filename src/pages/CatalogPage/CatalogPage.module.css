@@ -7,34 +7,3 @@
     display: flex;
     gap: 64px;
 }
-
-.catalog {
-    background-color: bisque;
-}
-
-.locationLabel {
-    display: flex;
-    flex-direction: column;
-    font-weight: 400;
-    color: var(--gray);
-    margin-bottom: 40px;
-}
-
-.locationLabelText {
-    margin-bottom: 8px;
-}
-
-.locationIcon {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 18px;
-    fill: currentColor;
-}
-
-.filtersText{
-    display: block;
-    color: var(--text);
-    margin-bottom: 32px;
-}
-

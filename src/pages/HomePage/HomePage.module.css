@@ -22,3 +22,8 @@
     color: var(--inputs);
     margin-bottom: 40px;
 }
+
+.heroButton {
+    padding: 16px 48.5px;
+    width: 173px;
+}

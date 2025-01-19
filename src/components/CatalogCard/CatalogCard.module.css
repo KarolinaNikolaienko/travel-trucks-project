@@ -1,0 +1,89 @@
+.catalogCard {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    border: 1px solid var(--gray-light);
+    border-radius: 20px;
+    padding: 24px;
+    max-width: 888px;
+    width: calc(100vw - (360px + 64px * 3 - 112px));
+}
+
+.catalogCardImg{
+    border-radius: 10px;
+    width: 292px;
+    min-height: 320px;
+}
+
+.catalogCardInfo {
+    width: 100%;
+    min-width: 0; /*for .description text-overflow*/
+    height: 100%;
+}
+
+.cardHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 24px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.33333;
+    margin-bottom: 8px;
+}
+
+.priceFavIcon{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.favLabel{
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.favLabel:hover > svg{
+    fill: var(--gray)
+}
+.favCheckbox:checked + label > svg {
+    fill: var(--button)
+}
+
+.reviewsLocation{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-weight: 400;
+    margin-bottom: 24px;
+}
+
+.reviews, .location {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.starIcon{
+    fill: var(--rating)
+}
+
+.reviewsText {
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+}
+
+.description {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 400;
+    margin-bottom: 24px;
+}
+
+.catalogCardButton{
+    padding: 16px 40px;
+    width: 166px;
+}

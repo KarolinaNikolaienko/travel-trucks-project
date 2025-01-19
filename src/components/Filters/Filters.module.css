@@ -1,22 +1,30 @@
-.filters:not(:last-child){
+.locationLabel {
+    display: flex;
+    flex-direction: column;
+    font-weight: 400;
+    color: var(--gray);
+    margin-bottom: 40px;
+}
+
+.locationLabelText {
+    margin-bottom: 8px;
+}
+
+.locationIcon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 18px;
+    fill: currentColor;
+}
+
+.filtersText {
+    display: block;
+    color: var(--text);
     margin-bottom: 32px;
 }
 
-.filterTitle{
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 1.2;
-}
-
-hr {
-    border: none;
-    height: 1px;
-    background-color: var(--gray-light);
-    margin: 24px 0;
-}
-
-.filtersList {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
+.searchButton {
+    padding: 16px 56.5px;
+    width: 166px;
 }
