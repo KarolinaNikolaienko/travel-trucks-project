@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import CategoriesList from "../CategoriesList/CategoriesList";
 import css from "./TruckFeatures.module.css";
-import TruckCharacteristicList from "../TruckCharacteristicList/TruckCharacteristicList";
+import TruckFeaturesList from "../TruckFeaturesList/TruckFeaturesList";
 
 const TruckFeaturesPage = () => {
   const [catList, setCatList] = useState([]);
@@ -41,7 +41,7 @@ const TruckFeaturesPage = () => {
       <div className={css.truckDetails}>
         <h3 className={css.detailsTitle}>Vehicle details</h3>
         <hr />
-        <TruckCharacteristicList truckCharList={charObj} />
+        <TruckFeaturesList truckCharList={charObj} />
       </div>
     </div>
   );

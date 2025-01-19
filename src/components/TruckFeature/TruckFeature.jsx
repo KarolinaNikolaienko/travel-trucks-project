@@ -1,6 +1,6 @@
-import css from "./TruckCharacteristic.module.css";
+import css from "./TruckFeature.module.css";
 
-const TruckCharacteristic = ({ characteristic, value }) => {
+const TruckFeature = ({ characteristic, value }) => {
   return (
     <>
       <span className={css.characteristic}>{characteristic}</span>
@@ -9,4 +9,4 @@ const TruckCharacteristic = ({ characteristic, value }) => {
   );
 };
 
-export default TruckCharacteristic;
+export default TruckFeature;

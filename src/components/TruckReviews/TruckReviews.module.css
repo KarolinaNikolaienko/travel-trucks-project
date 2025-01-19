@@ -1,0 +1,7 @@
+.truckReviews{
+    width: 631px;
+    max-height: 641px;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
