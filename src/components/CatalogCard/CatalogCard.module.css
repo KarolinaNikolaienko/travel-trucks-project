@@ -26,9 +26,6 @@
     justify-content: space-between;
     align-items: start;
     gap: 24px;
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 1.33333;
     margin-bottom: 8px;
 }
 
@@ -73,13 +70,17 @@
 .reviewsText {
     text-decoration: underline;
     text-decoration-skip-ink: none;
+    text-underline-offset: 3px;
 }
 
 .description {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    font-weight: 400;
+    margin-bottom: 24px;
+}
+
+.categoriesWrapper{
     margin-bottom: 24px;
 }
 

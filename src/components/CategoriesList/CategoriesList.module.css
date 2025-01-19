@@ -3,7 +3,6 @@
     flex-wrap: wrap;
     align-items: center;
     gap: 8px;
-    margin-bottom: 24px;
 }
 
 .categoryItem{
@@ -14,4 +13,8 @@
     border-radius: 100px;
     padding: 12px 18px;
     background-color: var(--badges);
+}
+
+.categoryItem.darkerStyle{
+    background-color: var(--gray);
 }

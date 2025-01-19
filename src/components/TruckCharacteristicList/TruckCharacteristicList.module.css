@@ -1,0 +1,10 @@
+.charList{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.charItem{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

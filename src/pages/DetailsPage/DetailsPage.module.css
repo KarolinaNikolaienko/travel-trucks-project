@@ -3,6 +3,73 @@
     padding-bottom: 80px;
 }
 
-hr {
+.divider {
     margin: 0;
+    margin-bottom: 44px;
+}
+
+.truckName, .truckPrice {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.33333;
+}
+
+.truckName{
+    margin-bottom: 8px;
+}
+
+.truckPrice{
+    margin-bottom: 28px;
+}
+
+.reviewsLocation {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-weight: 400;
+    margin-bottom: 16px;
+}
+
+.reviews,
+.location {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.starIcon {
+    fill: var(--rating)
+}
+
+.reviewsText {
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    text-underline-offset: 3px;
+}
+
+.imagesList{
+    display: flex;
+    gap: 48px;
+    width: 100%;
+    margin-bottom: 28px;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.image {
+    border-radius: 10px;
+    width: 292px;
+    height: 312px;
+}
+
+.description{
+    font-weight: 400;
+    margin-bottom: 60px;
+    color: var(--text);
+}
+
+.detailsAdditionalInfo{
+    display: flex;
+    gap: 40px;
 }

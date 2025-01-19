@@ -4,7 +4,7 @@ import CategoriesList from "../CategoriesList/CategoriesList";
 import { useEffect, useId, useState } from "react";
 import clsx from "clsx";
 
-const CatalogCard = ({truck}) => {
+const CatalogCard = ({ truck }) => {
   const navigate = useNavigate();
   const checkboxId = useId();
   const id = 1;
@@ -29,12 +29,12 @@ const CatalogCard = ({truck}) => {
       />
       <div className={css.catalogCardInfo}>
         <div className={css.cardHeader}>
-          <span className={css.truckName}>
+          <h2 className={css.truckName}>
             Truck Name Truck Name Truck Name Truck Name Truck Name Truck Name
             Truck Name
-          </span>
+          </h2>
           <div className={css.priceFavIcon}>
-            <span className={css.truckPrice}>&#8364;8000.00</span>
+            <h2 className={css.truckPrice}>&#8364;8000.00</h2>
             <div className={css.favorite}>
               <input
                 type="checkbox"
@@ -72,10 +72,12 @@ const CatalogCard = ({truck}) => {
           the perfect companion for those who value simplicity and
           functionality.
         </p>
-        <CategoriesList categoriesList={catList} />
+        <div className={css.categoriesWrapper}>
+          <CategoriesList categoriesList={catList} />
+        </div>
         <button
           className={css.catalogCardButton}
-          onClick={() => navigate(`/catalog/${id}`)}
+          onClick={() => navigate(`/catalog/${id}/features`)}
         >
           Show more
         </button>

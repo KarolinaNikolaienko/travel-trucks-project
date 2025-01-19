@@ -2,12 +2,6 @@
     margin-bottom: 32px;
 }
 
-.filterTitle{
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 1.2;
-}
-
 .filtersList {
     display: flex;
     flex-wrap: wrap;

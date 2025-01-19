@@ -5,7 +5,7 @@ import { nanoid } from "nanoid";
 const FiltersList = ({ filterTitle, filtersList }) => {
   return (
     <div className={css.filters}>
-      <span className={css.filterTitle}>{filterTitle}</span>
+      <h3 className={css.filterTitle}>{filterTitle}</h3>
       <hr />
       <ul className={css.filtersList}>
         {filtersList.map(({ name, icon, value }) => (

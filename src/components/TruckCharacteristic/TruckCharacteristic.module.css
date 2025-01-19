@@ -1,0 +1,3 @@
+.characteristic::first-letter{
+    text-transform: capitalize;
+}
