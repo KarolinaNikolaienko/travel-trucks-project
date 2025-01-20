@@ -1,0 +1,25 @@
+.formTitle{
+    margin-bottom: 8px;
+}
+
+.formText{
+    color: var(--gray);
+    margin-bottom: 24px;
+}
+
+.formFields{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 24px;
+}
+
+.errorMsg{
+    color: var(--button);
+}
+
+.sendBtn{
+    display: block;
+    width: 166px;
+    margin: 0 auto;
+}

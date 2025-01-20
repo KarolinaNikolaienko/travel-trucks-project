@@ -4,6 +4,7 @@ import { Outlet } from "react-router-dom";
 import Loader from "../../components/Loader/Loader";
 import clsx from "clsx";
 import NavigationAdditional from "../../components/NavigationAdditional/NavigationAdditional";
+import BookingForm from "../../components/BookingForm/BookingForm";
 
 const DetailsPage = () => {
   return (
@@ -86,7 +87,9 @@ const DetailsPage = () => {
           <Suspense fallback={<Loader />}>
             <Outlet />
           </Suspense>
-          <div className={css.contactForm}>Contact form</div>
+          <div className={css.contactForm}>
+            <BookingForm submit={(values) => console.log(values)} />
+          </div>
         </div>
       </div>
     </section>

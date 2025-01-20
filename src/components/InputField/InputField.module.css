@@ -21,3 +21,40 @@
 .inputField {
     position: relative;
 }
+
+.input[type="date"]{
+    position: relative;
+}
+
+.input[type="date"]::-webkit-inner-spin-button,
+.input[type="date"]::-webkit-calendar-picker-indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-appearance: none;
+}
+
+/* .input[type="date"]:not(:valid)::before {
+    content: attr(placeholder);
+    position: absolute;
+    display: block;
+    color: var(--gray);
+    background-color: var(--inputs);
+    top: 18px;
+    left: 18px;
+    width: 100%;
+    height: 100%;
+}
+
+.input[type="date"]:valid::before{
+    display: none;
+} */
+
+
+textarea {
+    min-height: 118px;
+}
+

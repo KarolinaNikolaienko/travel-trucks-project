@@ -73,3 +73,11 @@
     display: flex;
     gap: 40px;
 }
+
+.contactForm{
+    border: 1px solid var(--gray-light);
+    border-radius: 10px;
+    padding: 44px;
+    width: 100%;
+    min-height: 588px;
+}

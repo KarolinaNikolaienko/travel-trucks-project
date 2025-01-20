@@ -1,10 +1,10 @@
 .truckFeatures {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
     border-radius: 10px;
     padding: 44px 52px;
-    width: 631px;
+    max-width: 631px;
+    min-height: 588px;
     background-color: var(--inputs);
-}
-
-.categoriesWrapper{
-    margin-bottom: 100px;
 }

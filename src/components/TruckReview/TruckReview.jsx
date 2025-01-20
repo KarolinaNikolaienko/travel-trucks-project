@@ -1,5 +1,6 @@
 import clsx from "clsx";
 import css from "./TruckReview.module.css";
+import { nanoid } from "nanoid";
 
 const TruckReview = ({ reviewerName, rating, comment }) => {
   let stars = [];
@@ -7,20 +8,35 @@ const TruckReview = ({ reviewerName, rating, comment }) => {
   for (let i = 0; i < 5; i++) {
     if (i <= wholePartRating - 1)
       stars.push(
-        <svg className={clsx(css.star, css.gold)} width="16px" height="16px">
+        <svg
+          key={nanoid()}
+          className={clsx(css.star, css.gold)}
+          width="16px"
+          height="16px"
+        >
           <use href="../../../src/assets/icons.svg#star-icon"></use>
         </svg>
       );
     else
       stars.push(
-        <svg className={clsx(css.star)} width="16px" height="16px">
+        <svg
+          key={nanoid()}
+          className={clsx(css.star)}
+          width="16px"
+          height="16px"
+        >
           <use href="../../../src/assets/icons.svg#star-icon"></use>
         </svg>
       );
   }
   if (rating - wholePartRating !== 0)
     stars[wholePartRating] = (
-      <svg className={clsx(css.star, css.goldHalf)} width="16px" height="16px">
+      <svg
+        key={nanoid()}
+        className={clsx(css.star, css.goldHalf)}
+        width="16px"
+        height="16px"
+      >
         <use href="../../../src/assets/icons.svg#star-icon"></use>
       </svg>
     );
