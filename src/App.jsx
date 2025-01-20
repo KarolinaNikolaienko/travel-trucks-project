@@ -17,7 +17,13 @@ const TruckReviews = lazy(() =>
 
 function App() {
   return (
-    <Suspense fallback={<Loader />}>
+    <Suspense
+      fallback={
+        <div className="loaderWrapper">
+          <Loader />
+        </div>
+      }
+    >
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />

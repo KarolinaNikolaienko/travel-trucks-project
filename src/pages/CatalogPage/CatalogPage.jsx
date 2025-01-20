@@ -1,12 +1,17 @@
-import { useNavigate } from "react-router-dom";
 import css from "./CatalogPage.module.css";
 import clsx from "clsx";
-import { useEffect, useId, useState } from "react";
+import { useEffect } from "react";
 import Filters from "../../components/Filters/Filters";
-import CatalogCard from "../../components/CatalogCard/CatalogCard";
+import { fetchTrucks } from "../../redux/trucksOps";
+import { useDispatch } from "react-redux";
+import CatalogList from "../../components/CatalogList/CatalogList";
 
 const CatalogPage = () => {
-  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchTrucks());
+  }, [dispatch]);
 
   return (
     <section className={css.catalogSection}>
@@ -15,7 +20,7 @@ const CatalogPage = () => {
           <Filters />
         </div>
         <div className={css.catalog}>
-          <CatalogCard />
+          <CatalogList />
         </div>
       </div>
     </section>

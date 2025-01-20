@@ -3,6 +3,17 @@
     padding-bottom: 52px;
 }
 
+.catalogFilters{
+    max-width: 360px;
+}
+
+.catalog{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .catalogWrapper {
     display: flex;
     gap: 64px;

@@ -1,0 +1,9 @@
+.loaderWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    padding: 20px;
+}

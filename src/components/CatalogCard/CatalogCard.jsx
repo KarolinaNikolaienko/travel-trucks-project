@@ -1,23 +1,39 @@
 import { useNavigate } from "react-router-dom";
 import css from "./CatalogCard.module.css";
 import CategoriesList from "../CategoriesList/CategoriesList";
-import { useEffect, useId, useState } from "react";
+import { useId } from "react";
 import clsx from "clsx";
 
+const categories = {
+  automatic: ["Automatic", "diagram-icon"],
+  petrol: ["Petrol", "fuel-pump-icon"],
+  AC: ["AC", "wind-icon"],
+  bathroom: ["Bathroom", "shower-icon"],
+  kitchen: ["Kitchen", "cup-hot-icon"],
+  TV: ["TV", "tv-icon"],
+  radio: ["Radio", "radio-icon"],
+  refrigerator: ["Refrigerator", "fridge-icon"],
+  microwave: ["Microwave", "microwave-icon"],
+  gas: ["Gas", "gas-stove-icon"],
+  water: ["Water", "water-icon"],
+};
+
 const CatalogCard = ({ truck }) => {
+  console.log(truck);
   const navigate = useNavigate();
   const checkboxId = useId();
-  const id = 1;
-  const [catList, setCatList] = useState([]);
-
-  useEffect(() => {
-    setCatList([
-      ["Automatic", "diagram-icon"],
-      ["AC", "wind-icon"],
-      ["Petrol", "fuel-pump-icon"],
-      ["Kitchen", "cup-hot-icon"],
-    ]);
-  }, []);
+  let cats = [];
+  if (truck.transmission == "automatic") cats.push(categories.automatic);
+  if (truck.transmission == "automatic") cats.push(categories.automatic);
+  if (truck.AC) cats.push(categories.AC);
+  if (truck.kitchen) cats.push(categories.kitchen);
+  if (truck.TV) cats.push(categories.TV);
+  if (truck.radio) cats.push(categories.radio);
+  if (truck.refrigerator) cats.push(categories.refrigerator);
+  if (truck.microwave) cats.push(categories.microwave);
+  if (truck.gas) cats.push(categories.gas);
+  if (truck.water) cats.push(categories.water);
+  if (truck.bathroom) cats.push(categories.bathroom);
 
   const handleFavClick = () => {};
 
@@ -29,12 +45,9 @@ const CatalogCard = ({ truck }) => {
       />
       <div className={css.catalogCardInfo}>
         <div className={css.cardHeader}>
-          <h2 className={css.truckName}>
-            Truck Name Truck Name Truck Name Truck Name Truck Name Truck Name
-            Truck Name
-          </h2>
+          <h2 className={css.truckName}>{truck.name}</h2>
           <div className={css.priceFavIcon}>
-            <h2 className={css.truckPrice}>&#8364;8000.00</h2>
+            <h2 className={css.truckPrice}>&#8364;{truck.price}.00</h2>
             <div className={css.favorite}>
               <input
                 type="checkbox"
@@ -55,29 +68,24 @@ const CatalogCard = ({ truck }) => {
             <svg className={css.starIcon} width="16px" height="16px">
               <use href="../../../src/assets/icons.svg#star-icon"></use>
             </svg>
-            <span className={css.reviewsText}>4.4 (2 reviews)</span>
+            <span className={css.reviewsText}>
+              {truck.rating} ({truck.reviews.length} reviews)
+            </span>
           </div>
           <div className={css.location}>
             <svg className={css.mapIcon} width="16px" height="16px">
               <use href="../../../src/assets/icons.svg#map-icon"></use>
             </svg>
-            <span className={css.locationText}>Kyiv, Ukraine</span>
+            <span className={css.locationText}>{truck.location}</span>
           </div>
         </div>
-        <p className={css.description}>
-          Embrace simplicity and freedom with the Mavericks panel truck, an
-          ideal choice for solo travelers or couples seeking a compact and
-          efficient way to explore the open roads. This no-frills yet reliable
-          panel truck offers the essentials for a comfortable journey, making it
-          the perfect companion for those who value simplicity and
-          functionality.
-        </p>
+        <p className={css.description}>{truck.description}</p>
         <div className={css.categoriesWrapper}>
-          <CategoriesList categoriesList={catList} />
+          <CategoriesList categoriesList={cats} />
         </div>
         <button
           className={css.catalogCardButton}
-          onClick={() => navigate(`/catalog/${id}/features`)}
+          onClick={() => navigate(`/catalog/${truck.id}/features`)}
         >
           Show more
         </button>
