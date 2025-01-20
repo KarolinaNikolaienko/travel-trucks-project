@@ -125,6 +125,10 @@ button:hover {
   background-color: var(--button-hover);
 }
 
+textarea{
+  resize: none;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;

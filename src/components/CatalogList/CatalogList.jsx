@@ -14,17 +14,16 @@ const CatalogList = () => {
   const isLoading = useSelector(selectIsLoading);
   const error = useSelector(selectError);
 
-  console.log(trucks);
-  return (
-    <>
-      {isLoading && <Loader />}
-      {error && (
-        <div className={css.error}>
-          <p>Oops... Something went wrong</p>
-          <p className={css.errorMsg}>{error}</p>
-        </div>
-      )}
-      {trucks.length > 0 && (
+  if (trucks && trucks.items) {
+    return (
+      <>
+        {isLoading && <Loader />}
+        {error && (
+          <div className={css.error}>
+            <p>Oops... Something went wrong</p>
+            <p className={css.errorMsg}>{error}</p>
+          </div>
+        )}
         <ul className={css.filtersList}>
           {trucks.items.map((truck) => (
             <li key={nanoid()}>
@@ -32,9 +31,9 @@ const CatalogList = () => {
             </li>
           ))}
         </ul>
-      )}
-    </>
-  );
+      </>
+    );
+  }
 };
 
 export default CatalogList;

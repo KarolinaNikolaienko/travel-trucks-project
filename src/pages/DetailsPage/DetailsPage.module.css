@@ -47,22 +47,6 @@
     text-underline-offset: 3px;
 }
 
-.imagesList{
-    display: flex;
-    gap: 48px;
-    width: 100%;
-    margin-bottom: 28px;
-    overflow: scroll;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-}
-
-.image {
-    border-radius: 10px;
-    width: 292px;
-    height: 312px;
-}
-
 .description{
     font-weight: 400;
     margin-bottom: 60px;

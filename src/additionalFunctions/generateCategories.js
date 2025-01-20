@@ -15,7 +15,6 @@ const categories = {
 const generateCategories = (truck) => {
   let cats = [];
   if (truck.transmission == "automatic") cats.push(categories.automatic);
-  if (truck.transmission == "automatic") cats.push(categories.automatic);
   if (truck.AC) cats.push(categories.AC);
   if (truck.kitchen) cats.push(categories.kitchen);
   if (truck.TV) cats.push(categories.TV);
