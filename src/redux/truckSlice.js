@@ -1,5 +1,5 @@
 import { createSelector, createSlice } from "@reduxjs/toolkit";
-import { fetchTrucks } from "./trucksOps";
+import { fetchTruckById, fetchTrucks } from "./trucksOps";
 
 const initialState = {
   trucks: {
@@ -15,6 +15,9 @@ const trucksSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(fetchTrucks.fulfilled, (state, { payload }) => {
+        state.trucks.items = payload;
+      })
+      .addCase(fetchTruckById.fulfilled, (state, { payload }) => {
         state.trucks.items = payload;
       })
       .addMatcher(

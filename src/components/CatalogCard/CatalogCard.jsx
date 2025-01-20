@@ -3,46 +3,43 @@ import css from "./CatalogCard.module.css";
 import CategoriesList from "../CategoriesList/CategoriesList";
 import { useId } from "react";
 import clsx from "clsx";
+import generateCategories from "../../additionalFunctions/generateCategories";
 
-const categories = {
-  automatic: ["Automatic", "diagram-icon"],
-  petrol: ["Petrol", "fuel-pump-icon"],
-  AC: ["AC", "wind-icon"],
-  bathroom: ["Bathroom", "shower-icon"],
-  kitchen: ["Kitchen", "cup-hot-icon"],
-  TV: ["TV", "tv-icon"],
-  radio: ["Radio", "radio-icon"],
-  refrigerator: ["Refrigerator", "fridge-icon"],
-  microwave: ["Microwave", "microwave-icon"],
-  gas: ["Gas", "gas-stove-icon"],
-  water: ["Water", "water-icon"],
-};
+// const categories = {
+//   automatic: ["Automatic", "diagram-icon"],
+//   petrol: ["Petrol", "fuel-pump-icon"],
+//   AC: ["AC", "wind-icon"],
+//   bathroom: ["Bathroom", "shower-icon"],
+//   kitchen: ["Kitchen", "cup-hot-icon"],
+//   TV: ["TV", "tv-icon"],
+//   radio: ["Radio", "radio-icon"],
+//   refrigerator: ["Refrigerator", "fridge-icon"],
+//   microwave: ["Microwave", "microwave-icon"],
+//   gas: ["Gas", "gas-stove-icon"],
+//   water: ["Water", "water-icon"],
+// };
 
 const CatalogCard = ({ truck }) => {
-  console.log(truck);
   const navigate = useNavigate();
   const checkboxId = useId();
-  let cats = [];
-  if (truck.transmission == "automatic") cats.push(categories.automatic);
-  if (truck.transmission == "automatic") cats.push(categories.automatic);
-  if (truck.AC) cats.push(categories.AC);
-  if (truck.kitchen) cats.push(categories.kitchen);
-  if (truck.TV) cats.push(categories.TV);
-  if (truck.radio) cats.push(categories.radio);
-  if (truck.refrigerator) cats.push(categories.refrigerator);
-  if (truck.microwave) cats.push(categories.microwave);
-  if (truck.gas) cats.push(categories.gas);
-  if (truck.water) cats.push(categories.water);
-  if (truck.bathroom) cats.push(categories.bathroom);
+  // let cats = [];
+  // if (truck.transmission == "automatic") cats.push(categories.automatic);
+  // if (truck.transmission == "automatic") cats.push(categories.automatic);
+  // if (truck.AC) cats.push(categories.AC);
+  // if (truck.kitchen) cats.push(categories.kitchen);
+  // if (truck.TV) cats.push(categories.TV);
+  // if (truck.radio) cats.push(categories.radio);
+  // if (truck.refrigerator) cats.push(categories.refrigerator);
+  // if (truck.microwave) cats.push(categories.microwave);
+  // if (truck.gas) cats.push(categories.gas);
+  // if (truck.water) cats.push(categories.water);
+  // if (truck.bathroom) cats.push(categories.bathroom);
 
   const handleFavClick = () => {};
 
   return (
     <div className={css.catalogCard}>
-      <img
-        src="../../../src/assets/heroBackground.jpg"
-        className={css.catalogCardImg}
-      />
+      <img src={truck.gallery[0].original} className={css.catalogCardImg} />
       <div className={css.catalogCardInfo}>
         <div className={css.cardHeader}>
           <h2 className={css.truckName}>{truck.name}</h2>
@@ -81,7 +78,7 @@ const CatalogCard = ({ truck }) => {
         </div>
         <p className={css.description}>{truck.description}</p>
         <div className={css.categoriesWrapper}>
-          <CategoriesList categoriesList={cats} />
+          <CategoriesList categoriesList={generateCategories(truck)} />
         </div>
         <button
           className={css.catalogCardButton}

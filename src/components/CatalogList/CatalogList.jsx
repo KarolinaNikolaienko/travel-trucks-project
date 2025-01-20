@@ -24,7 +24,7 @@ const CatalogList = () => {
           <p className={css.errorMsg}>{error}</p>
         </div>
       )}
-      {trucks && trucks.length > 0 && (
+      {trucks.length > 0 && (
         <ul className={css.filtersList}>
           {trucks.items.map((truck) => (
             <li key={nanoid()}>

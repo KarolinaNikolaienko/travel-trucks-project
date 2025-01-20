@@ -8,3 +8,8 @@ export const getTrucksApi = async () => {
   const { data } = await instance.get("/campers");
   return data;
 };
+
+export const getTruckByIdApi = async (id) => {
+  const { data } = await instance.get(`/campers/${id}`);
+  return data;
+};
