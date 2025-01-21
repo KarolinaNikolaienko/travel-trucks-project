@@ -14,7 +14,7 @@ const TruckReview = ({ reviewerName, rating, comment }) => {
           width="16px"
           height="16px"
         >
-          <use href="../../../src/assets/icons.svg#star-icon"></use>
+          <use href="../../src/assets/icons.svg#star-icon"></use>
         </svg>
       );
     else
@@ -25,7 +25,7 @@ const TruckReview = ({ reviewerName, rating, comment }) => {
           width="16px"
           height="16px"
         >
-          <use href="../../../src/assets/icons.svg#star-icon"></use>
+          <use href="../../src/assets/icons.svg#star-icon"></use>
         </svg>
       );
   }
@@ -37,7 +37,7 @@ const TruckReview = ({ reviewerName, rating, comment }) => {
         width="16px"
         height="16px"
       >
-        <use href="../../../src/assets/icons.svg#star-icon"></use>
+        <use href="../../src/assets/icons.svg#star-icon"></use>
       </svg>
     );
   return (

@@ -12,7 +12,7 @@ const Navigation = () => {
       <Link to="/">
         <img
           className={css.logo}
-          src="../../../src/assets/logo-full-icon.svg"
+          src="src/assets/logo-full-icon.svg"
           alt="logo TravelTruck"
           width="136px"
           height="16px"

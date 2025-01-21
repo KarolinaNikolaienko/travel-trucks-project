@@ -17,7 +17,7 @@ const FilterCard = ({ cardName, cardIcon, cardValue }) => {
       />
       <label htmlFor={checkboxId} className={css.filterLabel}>
         <svg className={css.cardIcon} width="32px" height="32px">
-          <use href={`../../../src/assets/icons.svg#${cardIcon}`}></use>
+          <use href={`src/assets/icons.svg#${cardIcon}`}></use>
         </svg>
         <span className={css.cardName}>{cardName}</span>
       </label>

@@ -34,7 +34,7 @@ const DetailsPage = () => {
           <div className={css.reviewsLocation}>
             <div className={css.reviews}>
               <svg className={css.starIcon} width="16px" height="16px">
-                <use href="../../../src/assets/icons.svg#star-icon"></use>
+                <use href="../../src/assets/icons.svg#star-icon"></use>
               </svg>
               <span className={css.reviewsText}>
                 {truck.rating} ({reviewsAmount} reviews)
@@ -42,24 +42,13 @@ const DetailsPage = () => {
             </div>
             <div className={css.location}>
               <svg className={css.mapIcon} width="16px" height="16px">
-                <use href="../../../src/assets/icons.svg#map-icon"></use>
+                <use href="../../src/assets/icons.svg#map-icon"></use>
               </svg>
               <span className={css.locationText}>{truck.location}</span>
             </div>
           </div>
           <span className={css.truckPrice}>&#8364;{truck.price}.00</span>
           <ImagesList gallery={truck.gallery} />
-          {/* <ul className={css.imagesList}>
-            {truck.gallery &&
-              truck.gallery.length > 0 &&
-              truck.gallery.map((image) => (
-                <>
-                  <li className={css.imageItem} key={nanoid()}>
-                    <img className={css.image} src={image.original} />
-                  </li>
-                </>
-              ))}
-          </ul> */}
           <p className={css.description}>{truck.description}</p>
           <NavigationAdditional />
           <hr className={css.divider} />

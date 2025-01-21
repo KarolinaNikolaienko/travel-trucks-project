@@ -6,7 +6,6 @@ import FiltersList from "../FiltersList/FiltersList";
 const FiltersForm = () => {
   const [equipmentFilters, setEquipmentFilters] = useState([]);
   const [typeFilters, setTypeFilters] = useState([]);
-  const [selectedFilters, setSelectedFilters] = useState([]);
   const locationId = useId();
 
   useEffect(() => {
@@ -27,10 +26,6 @@ const FiltersForm = () => {
       { name: "Alcove", icon: "bi_grid-icon", value: "alcove" },
     ]);
   }, []);
-  //   console.log([
-  //     ...equipmentFilters.map((obj) => obj.value),
-  //     ...typeFilters.map((obj) => obj.value),
-  //   ]);
 
   return (
     <div className={css.filters}>
@@ -42,7 +37,7 @@ const FiltersForm = () => {
           style={{ paddingLeft: "46px" }}
         >
           <svg className={css.locationIcon} width="20px" height="20px">
-            <use href="../../../src/assets/icons.svg#map-icon"></use>
+            <use href="src/assets/icons.svg#map-icon"></use>
           </svg>
         </InputField>
       </label>
