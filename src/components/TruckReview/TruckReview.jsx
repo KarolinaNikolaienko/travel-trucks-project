@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import css from "./TruckReview.module.css";
 import { nanoid } from "nanoid";
+import Icons from "../../assets/icons.svg";
 
 const TruckReview = ({ reviewerName, rating, comment }) => {
   let stars = [];
@@ -14,7 +15,7 @@ const TruckReview = ({ reviewerName, rating, comment }) => {
           width="16px"
           height="16px"
         >
-          <use href="../../src/assets/icons.svg#star-icon"></use>
+          <use xlinkHref={`${Icons}#star-icon`}></use>
         </svg>
       );
     else
@@ -25,7 +26,7 @@ const TruckReview = ({ reviewerName, rating, comment }) => {
           width="16px"
           height="16px"
         >
-          <use href="../../src/assets/icons.svg#star-icon"></use>
+          <use xlinkHref={`${Icons}#star-icon`}></use>
         </svg>
       );
   }
@@ -37,7 +38,7 @@ const TruckReview = ({ reviewerName, rating, comment }) => {
         width="16px"
         height="16px"
       >
-        <use href="../../src/assets/icons.svg#star-icon"></use>
+        <use xlinkHref={`${Icons}#star-icon`}></use>
       </svg>
     );
   return (

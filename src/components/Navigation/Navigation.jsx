@@ -10,13 +10,14 @@ const generateIsActiveClass = ({ isActive }) => {
 const Navigation = () => {
   return (
     <div className={css.navigationBar}>
-      <Link to="/">
-        <svg className={css.logo} width="136px" height="16px">
-          <use xlinkHref={`${Icon}`}></use>
-        </svg>
+      <Link to="/" className={css.logoLink}>
+        {/* <svg className={css.logo} color="black" width="136px" height="16px">
+          <use xlinkHref={Icon}></use>
+        </svg> */}
         <img
           className={css.logo}
-          src="../../src/assets/logo-full-icon.svg"
+          src={Icon}
+          // src="../../src/assets/logo-full-icon.svg"
           alt="logo TravelTruck"
           width="136px"
           height="16px"
