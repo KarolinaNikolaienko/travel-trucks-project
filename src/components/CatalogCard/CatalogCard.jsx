@@ -4,6 +4,7 @@ import CategoriesList from "../CategoriesList/CategoriesList";
 import { useId } from "react";
 import clsx from "clsx";
 import generateCategories from "../../additionalFunctions/generateCategories";
+import Icons from "../../assets/icons.svg";
 
 const CatalogCard = ({ truck }) => {
   const navigate = useNavigate();
@@ -28,7 +29,7 @@ const CatalogCard = ({ truck }) => {
               />
               <label htmlFor={checkboxId} className={css.favLabel}>
                 <svg className={css.favIcon} width="24px" height="24px">
-                  <use href="src/assets/icons.svg#favorite-icon"></use>
+                  <use xlinkHref={`${Icons}#favorite-icon`}></use>
                 </svg>
               </label>
             </div>
@@ -37,7 +38,7 @@ const CatalogCard = ({ truck }) => {
         <div className={css.reviewsLocation}>
           <div className={css.reviews}>
             <svg className={css.starIcon} width="16px" height="16px">
-              <use href="src/assets/icons.svg#star-icon"></use>
+              <use xlinkHref={`${Icons}#star-icon`}></use>
             </svg>
             <span className={css.reviewsText}>
               {truck.rating} ({truck.reviews.length} reviews)
@@ -45,7 +46,7 @@ const CatalogCard = ({ truck }) => {
           </div>
           <div className={css.location}>
             <svg className={css.mapIcon} width="16px" height="16px">
-              <use href="src/assets/icons.svg#map-icon"></use>
+              <use xlinkHref={`${Icons}#map-icon`}></use>
             </svg>
             <span className={css.locationText}>{truck.location}</span>
           </div>

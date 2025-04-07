@@ -2,6 +2,7 @@ import { useEffect, useId, useState } from "react";
 import css from "./Filters.module.css";
 import InputField from "../InputField/InputField";
 import FiltersList from "../FiltersList/FiltersList";
+import Icons from "../../assets/icons.svg";
 
 const FiltersForm = () => {
   const [equipmentFilters, setEquipmentFilters] = useState([]);
@@ -36,8 +37,11 @@ const FiltersForm = () => {
           id={locationId}
           style={{ paddingLeft: "46px" }}
         >
-          <svg className={css.locationIcon} width="20px" height="20px">
+          {/* <svg className={css.locationIcon} width="20px" height="20px">
             <use href="src/assets/icons.svg#map-icon"></use>
+          </svg> */}
+          <svg className={css.locationIcon} width="20px" height="20px">
+            <use xlinkHref={`${Icons}#map-icon`}></use>
           </svg>
         </InputField>
       </label>
