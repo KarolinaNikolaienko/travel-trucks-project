@@ -12,6 +12,7 @@ import {
   selecttrucks,
 } from "../../redux/truckSlice";
 import ImagesList from "../../components/ImagesList/ImagesList";
+import Icons from "../../assets/icons.svg";
 
 const DetailsPage = () => {
   const params = useParams();
@@ -42,7 +43,7 @@ const DetailsPage = () => {
             <div className={css.reviewsLocation}>
               <div className={css.reviews}>
                 <svg className={css.starIcon} width="16px" height="16px">
-                  <use href="../../src/assets/icons.svg#star-icon"></use>
+                  <use xlinkHref={`${Icons}#star-icon`}></use>
                 </svg>
                 <span className={css.reviewsText}>
                   {truck.rating} ({reviewsAmount} reviews)
@@ -50,7 +51,7 @@ const DetailsPage = () => {
               </div>
               <div className={css.location}>
                 <svg className={css.mapIcon} width="16px" height="16px">
-                  <use href="../../src/assets/icons.svg#map-icon"></use>
+                  <use xlinkHref={`${Icons}#map-icon`}></use>
                 </svg>
                 <span className={css.locationText}>{truck.location}</span>
               </div>
